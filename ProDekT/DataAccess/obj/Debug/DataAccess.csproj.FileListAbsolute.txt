@@ -1,0 +1,12 @@
+D:\WebProjects\ProDekT\ProDekT\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.DataAccess.dll.config
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.DataAccess.dll
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.DataAccess.pdb
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\EntityFramework.dll
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.Extensions.dll
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.Extensions.pdb
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\EntityFramework.xml
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebProjects\ProDekT\ProDekT\DataAccess\obj\Debug\ProDekT.DataAccess.dll
+D:\WebProjects\ProDekT\ProDekT\DataAccess\obj\Debug\ProDekT.DataAccess.pdb
