@@ -2,3 +2,4 @@ D:\WebProjects\ProDekT\ProDekT\Extensions\bin\Debug\ProDekT.Extensions.dll
 D:\WebProjects\ProDekT\ProDekT\Extensions\bin\Debug\ProDekT.Extensions.pdb
 D:\WebProjects\ProDekT\ProDekT\Extensions\obj\Debug\ProDekT.Extensions.dll
 D:\WebProjects\ProDekT\ProDekT\Extensions\obj\Debug\ProDekT.Extensions.pdb
+D:\WebProjects\ProDekT\ProDekT\Extensions\obj\Debug\Extensions.csprojResolveAssemblyReference.cache

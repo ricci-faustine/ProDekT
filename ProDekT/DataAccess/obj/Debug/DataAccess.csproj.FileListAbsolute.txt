@@ -10,3 +10,5 @@ D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\EntityFramework.xml
 D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 D:\WebProjects\ProDekT\ProDekT\DataAccess\obj\Debug\ProDekT.DataAccess.dll
 D:\WebProjects\ProDekT\ProDekT\DataAccess\obj\Debug\ProDekT.DataAccess.pdb
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.Domain.dll
+D:\WebProjects\ProDekT\ProDekT\DataAccess\bin\Debug\ProDekT.Domain.pdb

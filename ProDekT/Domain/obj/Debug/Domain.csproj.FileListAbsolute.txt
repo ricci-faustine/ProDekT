@@ -1,0 +1,5 @@
+D:\WebProjects\ProDekT\ProDekT\Domain\bin\Debug\ProDekT.Domain.dll
+D:\WebProjects\ProDekT\ProDekT\Domain\bin\Debug\ProDekT.Domain.pdb
+D:\WebProjects\ProDekT\ProDekT\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\WebProjects\ProDekT\ProDekT\Domain\obj\Debug\ProDekT.Domain.dll
+D:\WebProjects\ProDekT\ProDekT\Domain\obj\Debug\ProDekT.Domain.pdb
