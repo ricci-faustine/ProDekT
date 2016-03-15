@@ -1,0 +1,5 @@
+D:\WebProjects\ProDekT\ProDekT\Client\bin\Client.dll
+D:\WebProjects\ProDekT\ProDekT\Client\bin\Client.pdb
+D:\WebProjects\ProDekT\ProDekT\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\WebProjects\ProDekT\ProDekT\Client\obj\Debug\Client.dll
+D:\WebProjects\ProDekT\ProDekT\Client\obj\Debug\Client.pdb
