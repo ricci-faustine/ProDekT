@@ -16,7 +16,7 @@
  <form name="myForm" class="form-horizontal" role="form" ng-submit="submitForm()" novalidate>
  <div ng-repeat="field in entity.fields">    
   <ng-form name="form">
-    <!-- TEXT FIELDS -->
+    <!-- Display textbox fields -->
     <div ng-if="field.type=='text'" class="form-group">
       <label class="col-sm-2 control-label">{{field.label}}</label>
       <div class="col-sm-4">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <!-- EMAIL FIELDS -->
+    <!-- Display email fields -->
     <div ng-if="field.type=='email'" class="form-group">
       <label class="col-sm-2 control-label">{{field.label}}</label>
       <div class="col-sm-4">
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <!-- Number FIELDS -->
+    <!-- Display Number fields -->
     <div ng-if="field.type=='number'" class="form-group">
       <label class="col-sm-2 control-label">{{field.label}}</label>
       <div class="col-sm-4">
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <!-- PASSWORD FIELDS -->
+    <!-- Display password field -->
     <div ng-if="field.type=='password'" class="form-group" >
       <label class="col-sm-2 control-label">{{field.label}}</label>
       <div class="col-sm-4">
@@ -56,37 +56,48 @@
         </div>
     </div>
 
-    <!-- SELECT FIELDS -->
+    <!-- Display Drop-downs -->
     <div ng-if="field.type=='select'" class="form-group" >
       <label class="col-sm-2 control-label">{{field.label}}</label>
       <div class="col-sm-4">
-        <select data-ng-model="field.data" ng-options="option.name for option in field.options" class="form-control" ng-required="{{field.required_validation.required}}"></select>
+        <select data-ng-model="field.data" name="{{field.name}}" ng-options="option.name for option in field.options" class="form-control" ng-required="{{field.required_validation.required}}">
+            <option value="">{{field.first_option_text}}</option>
+        </select>
         <span data-ng-show=" {{'(form.'+field.name+'.$dirty || submitted) && form.'+field.name+'.$error.required'}}">{{field.required_validation.message}}</span>
       </div>      
     </div>
 
-    <!-- RADIO FIELDS -->
+    <!-- Display Radio Fields -->
     <div ng-if="field.type=='radio'" class="form-group">
-      <label class="col-sm-2 control-label">{{field.label}}</label>
-      <div class="col-sm-4">
-           
-        <div class="checkbox" ng-repeat="option in field.options" >
-                  <label>                
-            <input type="radio" data-ng-model="field.data"  name="taskGroup"  id="{{option.name}}" value="{{option.id}}">{{option.name}}
-          </label>
-                </div>
-      </div>
+        <label class="col-sm-2 control-label">{{field.label}}</label>
+        <div class="col-sm-4">
+            <div class="checkbox" ng-repeat="option in field.options" >
+                <label>                
+                    <input type="radio" data-ng-model="field.data"  name="{{field.name}}"  id="{{option.name}}" value="{{option.id}}" ng-required="{{field.required_validation.required}}">{{option.name}}
+                </label>
+            </div>
+            <span data-ng-show=" {{'(form.'+field.name+'.$dirty || submitted) && form.'+field.name+'.$error.required'}}">{{field.required_validation.message}}</span>
+        </div>
     </div>
 
-    <!-- CHECKBOX FIELDS -->
+    <!-- Display Checkboxes (groups / single) -->
     <div ng-if="field.type=='checkbox'" class="form-group" >
         <label class="col-sm-2 control-label">{{field.label}}</label>
         <div class="col-sm-4">        
-            <div class="checkbox" ng-repeat="option in field.options" >
-            <label>
-                <input type="checkbox" data-ng-model="option.data"  name="taskGroup"  id="Checkbox1" value="{{option.id}}" >{{option.name}}
-            </label>
+            <div ng-repeat="(key, val) in field.options">
+                <input type="checkbox" ng-model="field.selected_items[val.name]" name="{{field.name}}"
+                ng-required="!someSelected(field.selected_items)">  {{val.name}}
+            </div>
+            <span data-ng-show=" {{'(form.'+field.name+'.$dirty || submitted) && form.'+field.name+'.$error.required'}}">{{field.required_validation.message}}</span>
         </div>
+    </div>
+
+      <!-- Display textarea fields -->
+    <div ng-if="field.type=='textarea'" class="form-group">
+      <label class="col-sm-2 control-label">{{field.label}}</label>
+      <div class="col-sm-4">
+        <textarea rows="{{field.rows}}" cols="{{field.cols}}" dynamic-name="field.name" id="{{ field.type }}" data-ng-model="field.data"  class="form-control" ng-required="{{field.required_validation.required}}"></textarea>
+         <span  data-ng-show=" {{'(form.'+field.name+'.$dirty || submitted) && form.'+field.name+'.$error.required'}}">{{field.required_validation.message}}</span>
       </div>
     </div>
 

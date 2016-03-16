@@ -32,7 +32,21 @@ dynFormApp.controller('DynamicFormController', function ($scope, $log) {
                     message: "Please enter your age."
                 }
             },
-            { type: "radio", name: "sex_id", label: "Sex", options: [{ id: 1, name: "Male" }, { id: 2, name: "Female" }], required: true, data: "" },
+            {
+                type: "radio",
+                name: "sex_id",
+                label: "Sex",
+                options: [
+                    { id: 1, name: "Male" },
+                    { id: 2, name: "Female" }
+                ],
+                data: "",
+                required_validation:
+                {
+                    required: true,
+                    message: "Please choose your sex."
+                }
+            },
             {
                 type: "email",
                 name: "emailUser",
@@ -71,6 +85,7 @@ dynFormApp.controller('DynamicFormController', function ($scope, $log) {
                 type: "select",
                 name: "city_id",
                 label: "City",
+                first_option_text: "Please choose your city",
                 options: [
                     { name: "Newyork" },
                     { name: "Arizona" },
@@ -81,24 +96,38 @@ dynFormApp.controller('DynamicFormController', function ($scope, $log) {
                 required_validation:
                 {
                     required: true,
-                    message: "Please choose your city."
+                    message: "Please select your city."
                 }
             },
             {
                 type: "checkbox",
                 name: "car_id",
-                label: "Cars",
+                selected_items: {},
+                label: "Preferred Car Makes",
                 options: [
-                    { id: 1, name: "bmw" },
-                    { id: 2, name: "audi" },
-                    { id: 3, name: "porche" },
-                    { id: 4, name: "jaguar" }
+                    { id: 1, name: "BMW" },
+                    { id: 2, name: "Audi" },
+                    { id: 3, name: "Porche" },
+                    { id: 4, name: "Jaguar" }
                 ],
                 data: "",
                 required_validation:
                 {
                     required: true,
-                    message: "Please choose your car make."
+                    message: "Please choose preferred car makes."
+                }
+            },
+            {
+                type: "textarea",
+                rows: 10,
+                cols: 50,
+                name: "remarks",
+                label: "Remarks",
+                data: "",
+                required_validation:
+                {
+                    required: true,
+                    message: "Please enter remarks."
                 }
             }
           ]
@@ -106,8 +135,16 @@ dynFormApp.controller('DynamicFormController', function ($scope, $log) {
 
     $scope.submitted = false;
 
+    $scope.someSelected = function (object) {
+        return Object.keys(object).some(function (key) {
+            return object[key];
+        });
+    }
+
     $scope.submitForm = function () {
         $scope.submitted = true;
+
+
     }
 })
 
